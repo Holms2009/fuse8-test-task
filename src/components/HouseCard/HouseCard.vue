@@ -1,5 +1,5 @@
 <template>
-  <a class="HouseCard" href="#" target="_blank">
+  <a class="HouseCard" :href="`/details/[${data.id}]`" target="_blank">
     <div class="HouseCard__image-block">
       <img
         class="HouseCard__image"

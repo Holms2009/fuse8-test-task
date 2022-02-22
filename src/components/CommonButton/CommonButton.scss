@@ -1,0 +1,28 @@
+.CommonButton {
+  width           : 150px;
+  height          : 50px;
+  font-weight     : 700;
+  background-color: #ffffff;
+  border          : 1px solid #d8d8d8;
+  border-radius   : 25px;
+  cursor          : pointer;
+  transition      : background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+
+  &__icon {
+    display        : inline-block;
+    margin-left    : 10px;
+    width          : 5px;
+    height         : 15px;
+    background     : url('../../assets/arrow.svg') no-repeat 50% 50%;
+    background-size: cover;
+    vertical-align: middle;
+  }
+}

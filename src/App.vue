@@ -13,12 +13,15 @@
     <div class="App__cards">
       <HouseCard v-for="house in filterHouses" :data="house" :key="house.id" />
     </div>
+    <CommonButton buttonText="See more" buttonType="button" />
   </div>
 </template>
+
 
 <script>
 import { mapActions, mapGetters } from "vuex";
 import HouseCard from "./components/HouseCard/HouseCard.vue";
+import CommonButton from "./components/CommonButton/CommonButton.vue";
 
 export default {
   name: "App",
@@ -50,11 +53,47 @@ export default {
   },
   components: {
     HouseCard,
+    CommonButton,
   },
 };
 </script>
 
+
 <style lang="scss">
+html {
+  @media screen and (max-width: 1280px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 870px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 490px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 11px;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -64,19 +103,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
   padding-top: 36px;
+  padding-bottom: 77px;
   max-width: calc(100vw * (1180 / 1366));
   color: #363636;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  * {
-    font-family: "Open Sans", sans-serif;
-  }
+  font-family: "Open Sans", sans-serif;
 
   &__title {
     margin: 0;
+    font-size: 2.25rem;
     color: #45852d;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.75rem;
+    }
   }
 
   &__cards {
@@ -84,10 +126,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    .HouseCard:not(:last-of-type) {
-      margin-bottom: 38px;
-    }
+    row-gap: 30px;
   }
 
   &__filter {
@@ -98,6 +137,7 @@ body {
 
     &-tip {
       margin-right: 15px;
+      font-size: 16px;
       font-weight: 700;
     }
 
@@ -108,6 +148,10 @@ body {
       line-height: 26px;
       border: 1px solid #d8d8d8;
       border-radius: 25px;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 }
