@@ -2,11 +2,12 @@
   <div class="App" id="app">
     <h1 class="App__title">Our Latest Developments</h1>
     <div class="App__filter">
-      <span class="App__filter-tip">Filter</span>
+      <label class="App__filter-tip" for="filter">Filter</label>
       <input
         class="App__filter-input"
         type="text"
         name="filter"
+        id="filter"
         v-model="filterField"
       />
     </div>
