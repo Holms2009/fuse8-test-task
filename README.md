@@ -1,19 +1,17 @@
-# fuse8-test-task
+# Тестовое задание для fuse8
 
-## Project setup
+## Используемые инструменты:
+  - Vue v2.6.11;
+  - Vuex v3.4.0;
+  - Vue CLI v4.5.15;
+  - SCSS;
+
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### CЗапуск проекта
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
