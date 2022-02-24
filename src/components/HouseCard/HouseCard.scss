@@ -1,7 +1,7 @@
 .HouseCard {
   display         : inline-block;
   width           : calc(100vw * (379 / 1366));
-  height          : calc(100vw * (381 / 1366));
+  height          : fit-content;
   border          : 1px solid #d8d8d8;
   background-color: #f8f8f8;
   text-decoration : none;
@@ -15,12 +15,10 @@
 
   @media screen and (max-width: 1000px) {
     width : calc(100vw * (420 / 1000));
-    height: calc(100vw * (381 / 1000));
   }
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    height: calc(100vw * (400 / 600));
   }
 
   &__image-block {
@@ -83,32 +81,8 @@
   &__main {
     padding: 20px;
 
-    @media screen and (max-width: 1280px) {
-      padding: 10px;
-    }
-
-    @media screen and (max-width: 1024px) {
-      padding: 5px;
-    }
-
-    @media screen and (max-width: 1000px) {
-      padding: 10px;
-    }
-
-    @media screen and (max-width: 790px) {
-      padding: 5px;
-    }
-
     @media screen and (max-width: 600px) {
-      padding: 15px;
-    }
-
-    @media screen and (max-width: 525px) {
       padding: 10px;
-    }
-
-    @media screen and (max-width: 360px) {
-      padding: 5px;
     }
   }
 
